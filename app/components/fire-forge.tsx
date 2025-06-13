@@ -20,7 +20,7 @@ const FireForge = () => {
   >([]);
 
   const lastScrollY = useRef(0);
-  const scrollTimeout = useRef<NodeJS.Timeout>();
+  const scrollTimeout = useRef<NodeJS.Timeout>(null);
 
   useEffect(() => {
     setIsClient(true);
