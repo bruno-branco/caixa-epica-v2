@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen text-[0]">
       <div className="relative w-full h-[1024px] bg-cover bg-center bg-[url(/bg-1.jpg)]">
-        <div className="absolute inset-0  bg-gradient-to-b from-transparent via-gray-950 to-black md:bg-gradient-to-r md:from-transparent md:to-black/90" />
+        <div className="absolute inset-0  bg-gradient-to-b from-transparent via-gray-950 to-black md:bg-gradient-to-r md:from-transparent md:via-none md:to-black/90" />
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 md:flex-row md:items-start md:justify-between md:px-8 lg:px-20">
           <div className="flex flex-col items-center text-center md:items-start md:text-left md:mt-20">
