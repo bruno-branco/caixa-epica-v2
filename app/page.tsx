@@ -37,7 +37,7 @@ export default function Home() {
             width={700}
             height={700}
             alt="asset"
-            className="mt-8 brightness-50"
+            className="mt-8 brightness-50 md:w-[700px] w-[200px]"
           />
           <Card className="bg-transparent self-center border-none drop-shadow-2xl rounded-md p-4 w-full max-w-sm mt-12 md:-mt-10 md:ml-8 lg:mr-0 ">
             <CardContent className="p-0">
