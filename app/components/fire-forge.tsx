@@ -246,7 +246,7 @@ const FireForge = () => {
       >
         {/* Base forge glow */}
         <div
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-96 h-32 rounded-t-full opacity-[var(--fire-opacity)] transition-all duration-300"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/3 w-[500px] h-32 rounded-t-full opacity-[var(--fire-opacity)] transition-all duration-300"
           style={{
             background: `radial-gradient(ellipse at center bottom, rgba(245, 101, 36, ${0.15 + scrollVelocity * 0.4}) 0%, rgba(234, 88, 12, ${0.08 + scrollVelocity * 0.3}) 40%, transparent 70%)`,
             transform: `translateX(-50%) scaleY(${1 + scrollVelocity * 0.6}) scaleX(${1 + scrollVelocity * 0.2})`,
