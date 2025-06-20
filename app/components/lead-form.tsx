@@ -48,7 +48,7 @@ export default function LeadForm() {
   });
 
   const onSubmit = (data: FormSchema) => {
-    console.log(data);
+    saveLead(data);
   };
 
   const { mutate: saveLead, isPending } = useMutation({
