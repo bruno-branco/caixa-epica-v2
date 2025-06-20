@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useMutation } from "@tanstack/react-query";
 import { createLead } from "../actions";
+import { Loader2 } from "lucide-react";
 
 const schema = z.object({
   name: z.string().min(2),
@@ -103,8 +104,8 @@ export default function LeadForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="ml-auto bg-amber-800/20">
-          Submit
+        <Button type="submit" className="w-full bg-amber-800/20">
+          {!isPending ? "Submit" : <Loader2 className="animate-spin" />}
         </Button>
       </form>
     </Form>
