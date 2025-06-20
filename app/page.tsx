@@ -34,7 +34,7 @@ export default function Home() {
           </CardContent>
         </Card>
       </div>
-      <div className="bg-[url(/bg-2.jpg)] w-full flex h-[893px] -mt-1 bg-contain"></div>
+      {/*       <div className="bg-[url(/bg-2.jpg)] w-full flex h-[893px] -mt-1 bg-contain"></div> */}
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
 
       {/* Fire effect */}
