@@ -21,6 +21,7 @@ export async function createLead(data: FormSchema) {
     email: data.email,
     phone: cleanedPhone,
     state: state,
+    origin: data.origin,
   });
   return newLead;
 }
