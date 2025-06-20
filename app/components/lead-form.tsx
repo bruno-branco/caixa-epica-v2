@@ -5,7 +5,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -16,11 +15,12 @@ import { Button } from "@/components/ui/button";
 import { useMutation } from "@tanstack/react-query";
 import { createLead } from "../actions";
 import { Loader2 } from "lucide-react";
+import { phoneMask } from "@/lib/utils";
 
 const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
-  phone: z.string().min(11).max(11),
+  phone: z.string().min(15).max(15),
 });
 
 export type FormSchema = z.infer<typeof schema>;
@@ -97,7 +97,9 @@ export default function LeadForm() {
                 <Input
                   placeholder="xx-xxxx-xxxx"
                   {...field}
+                  type="tel"
                   className="border-gray-400/40 border-2 text-white"
+                  onChange={(e) => field.onChange(phoneMask(e.target.value))}
                 />
               </FormControl>
               <FormMessage />
@@ -105,7 +107,7 @@ export default function LeadForm() {
           )}
         />
         <Button type="submit" className="w-full bg-amber-800/20">
-          {!isPending ? "Submit" : <Loader2 className="animate-spin" />}
+          {!isPending ? "Inscrever-se" : <Loader2 className="animate-spin" />}
         </Button>
       </form>
     </Form>
