@@ -1,11 +1,9 @@
-"use server";
 import Image from "next/image";
-import FireForge from "../components/fire-forge";
+import FireForge from "../../components/fire-forge";
+import LeadForm from "./components/lead-form";
 import { Card, CardContent } from "@/components/ui/card";
-import { redirect } from "next/navigation";
 
-export default async function Home() {
-  redirect("/sorteio");
+export default function Sorteio() {
   return (
     <main className="flex flex-col min-h-screen text-[0]">
       <div className="relative w-full h-[1024px] bg-cover bg-center bg-[url(/bg-1.jpg)]">
@@ -41,6 +39,11 @@ export default async function Home() {
             alt="asset"
             className="mt-8 brightness-50 md:w-[700px] w-[200px]"
           />
+          <Card className="bg-transparent self-center border-none drop-shadow-2xl rounded-md p-4 w-full max-w-sm mt-12 md:-mt-10 md:ml-8 lg:mr-0 ">
+            <CardContent className="p-0">
+              <LeadForm />
+            </CardContent>
+          </Card>
         </div>
       </div>
       {/*       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center p-4"></footer> */}

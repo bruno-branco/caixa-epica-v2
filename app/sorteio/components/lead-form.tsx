@@ -68,7 +68,9 @@ export default function LeadForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Seu nome</FormLabel>
+              <FormLabel className="text-white font-bebas text-xl">
+                Seu nome
+              </FormLabel>
               <FormControl>
                 <Input
                   placeholder="Vecna, o deus mutilado"
@@ -85,7 +87,9 @@ export default function LeadForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Seu melhor e-mail</FormLabel>
+              <FormLabel className="text-white font-bebas text-xl">
+                Seu melhor e-mail
+              </FormLabel>
               <FormControl>
                 <Input
                   placeholder="vecnareidelas@email.com"
@@ -102,8 +106,8 @@ export default function LeadForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">
-                Seu telefone (o número do sorteio será enviado por whatsapp)
+              <FormLabel className="text-white font-bebas text-xl">
+                Seu telefone (resultado do sorteio no whatsapp)
               </FormLabel>
               <FormControl>
                 <Input
@@ -123,7 +127,7 @@ export default function LeadForm() {
           name="origin"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">
+              <FormLabel className="text-white font-bebas text-xl">
                 Por onde você ficou sabendo do sorteio?
               </FormLabel>
               <FormControl>
@@ -152,7 +156,8 @@ export default function LeadForm() {
         />
         <Button
           type="submit"
-          className="w-full bg-amber-700/20 hover:cursor-pointer"
+          className={`w-full bg-amber-700/20 hover:cursor-pointer`}
+          disabled={isPending}
         >
           {!isPending ? "Inscrever-se" : <Loader2 className="animate-spin" />}
         </Button>
