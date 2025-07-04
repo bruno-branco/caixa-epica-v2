@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Sorteio() {
   return (
     <main className="flex flex-col min-h-screen text-[0]">
-      <div className="relative w-full h-[1024px] bg-cover bg-center bg-[url(/bg-1.jpg)]">
+      <div className="relative w-full h-full bg-cover bg-center bg-[url(/bg-1.jpg)]">
         <div className="absolute inset-0  bg-gradient-to-b from-transparent via-gray-950 to-black md:bg-gradient-to-r md:from-transparent md:via-black/60 md:to-black" />
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 md:flex-row md:items-start md:justify-between md:px-8 lg:px-20">
