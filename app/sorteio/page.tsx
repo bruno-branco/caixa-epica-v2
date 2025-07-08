@@ -7,60 +7,70 @@ import RaffleRulesModal from "./components/rules-modal";
 
 export default function Sorteio() {
   return (
-    <Dialog>
-      {/* The DialogContent is the modal window.
-        - We set a max-width like `max-w-2xl` to make it wider.
-        - The background color is removed from here because the modal component handles it.
-        - p-0 removes the default padding so our modal component can control its own spacing.
-      */}
-      <DialogContent className="max-w-2xl border-none p-0 bg-transparent">
-        <RaffleRulesModal />
-      </DialogContent>
+    <>
+      {/* The Dialog for the rules modal remains unchanged. */}
+      <Dialog>
+        <DialogContent className="max-w-2xl border-none bg-transparent p-0">
+          <RaffleRulesModal />
+        </DialogContent>
 
-      {/* The rest of your page remains exactly the same. */}
-      <main className="flex flex-col min-h-screen text-[0] bg-[url(/bg-2.jpg)]">
-        <div className="relative w-full h-full min-h-screen bg-cover bg-center bg-[url(/bg-1.jpg)]">
-          <div className="absolute inset-0  bg-gradient-to-b from-transparent via-gray-950 to-black md:bg-gradient-to-r md:from-transparent md:via-black/60 md:to-black" />
+        <main className="flex min-h-screen flex-col bg-[url(/bg-2.jpg)] text-[0]">
+          <div
+            className="relative flex min-h-screen w-full flex-grow items-center justify-center bg-cover bg-center p-4 sm:p-6 lg:p-8"
+            style={{ backgroundImage: "url(/bg-1.jpg)" }}
+          >
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950 to-black md:bg-gradient-to-r md:from-transparent md:via-black/60 md:to-black" />
 
-          <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 md:flex-row md:items-start md:justify-between md:px-8 lg:px-20">
-            <div className="flex flex-col items-center text-center md:items-start md:text-left md:mt-20">
-              <div className="absolute left-0 top-0 hidden md:block h-full w-0 shadow-[100px_0px_300px_100px_rgba(56,42,21,0.4)] z-10" />
+            {/* This is the main content grid.
+            - On mobile (default), it's a single column (`grid-cols-1`), so items stack vertically.
+            - On desktop (`md:`), it becomes a two-column grid (`md:grid-cols-5`) for precise alignment.
+          */}
+            <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-8 md:grid-cols-5 md:gap-x-12">
+              {/* Left Column Container (spans 3 of 5 grid columns on desktop) */}
+              <div className="md:col-span-3">
+                <div className="flex flex-col items-center justify-center gap-2 text-center md:items-start md:text-left">
+                  {/* Header: Logo & Title */}
+                  <div className="flex w-full flex-col items-center gap-6 md:flex-row">
+                    <Image
+                      src={"/logo.png"}
+                      width={305}
+                      height={227}
+                      alt="Caixa Épica Logo"
+                      className="w-40 h-auto md:min-w-[200px]"
+                    />
+                    <div className="hidden h-24 border-l-4 border-l-[#FFB548]/80 md:block" />
+                    <h1 className="font-bebas text-5xl font-bold tracking-wide md:text-6xl lg:text-6xl w-full">
+                      <span className="text-[#FEB546]">PARTICIPE DO </span>
+                      <br />
+                      <span className="text-white">SORTEIO DE MINIATURAS</span>
+                    </h1>
+                  </div>
 
-              <Image
-                src={"/logo.png"}
-                width={305}
-                height={227}
-                alt="logo"
-                className="w-40 h-auto md:w-[305px] md:h-[227px] mt-8 md:mt-0"
-              />
+                  {/* Miniatures Image */}
+                  <Image
+                    src={"/asset-1.png"}
+                    width={700}
+                    height={700}
+                    alt="Coleção de miniaturas do sorteio"
+                    className="mt-0 w-full max-w-xl self-center brightness-110 md:min-w-[920px]"
+                  />
+                </div>
+              </div>
 
-              <div className="flex flex-col items-center md:items-start w-full max-w-md mt-4">
-                <p className="text-base text-[#FEB546] font-bebas font-bold tracking-wide md:text-2xl">
-                  PARTICIPE
-                </p>
-                <p className="text-3xl text-white font-bebas font-bold leading-tight md:text-5xl lg:text-7xl mt-2 md:mt-4">
-                  DO NOSSO SORTEIO DE MINIATURAS
-                </p>
-                <div className="border-b-[#FFB548] border-b-4 w-16 md:w-24 h-[6px] mx-auto mt-2 md:mx-0" />
+              {/* Right Column: Form (spans 2 of 5 grid columns on desktop) */}
+              <div className="flex w-full max-w-sm justify-self-center md:col-span-2 md:justify-self-center">
+                <Card className="w-full rounded-md border-none bg-transparent p-0 drop-shadow-2xl">
+                  <CardContent className="p-0">
+                    <LeadForm />
+                  </CardContent>
+                </Card>
               </div>
             </div>
-
-            <Image
-              src={"/asset-1.png"}
-              width={700}
-              height={700}
-              alt="asset"
-              className="mt-8 brightness-50 md:w-[700px] w-[200px]"
-            />
-            <Card className="bg-transparent self-center border-none drop-shadow-2xl rounded-md p-4 w-full max-w-sm mt-12 md:-mt-10 md:ml-8 lg:mr-0 ">
-              <CardContent className="p-0">
-                <LeadForm />
-              </CardContent>
-            </Card>
           </div>
-        </div>
-        <FireForge />
-      </main>
-    </Dialog>
+          <FireForge />
+        </main>
+      </Dialog>
+    </>
   );
 }

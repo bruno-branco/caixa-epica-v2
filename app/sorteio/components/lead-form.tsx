@@ -173,7 +173,18 @@ export default function LeadForm() {
                 Como <span className="text-[#FEB546]">participar:</span>
               </p>
               <ul className="text-sm text-gray-300 list-disc list-inside pl-2">
-                <li>Seguir @caixaepica no Instagram</li>
+                <li>
+                  Seguir{" "}
+                  <a
+                    href="https://www.instagram.com/caixaepica"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FFB548] hover:underline"
+                  >
+                    @caixaepica
+                  </a>{" "}
+                  no Instagram
+                </li>
                 <li>Comentar no post marcando 3 amigos</li>
               </ul>
             </div>
