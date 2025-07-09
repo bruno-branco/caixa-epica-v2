@@ -196,6 +196,7 @@ export default function LeadForm() {
                   Comentar no{" "}
                   <a
                     href="https://www.instagram.com/reel/DL5tE9IxlyB/?utm_source=ig_web_copy_link"
+                    target="_blank"
                     className="text-[#FFB548] hover:underline"
                   >
                     post
