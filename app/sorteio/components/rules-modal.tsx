@@ -77,7 +77,7 @@ export default function RaffleRulesModal() {
               no Instagram.
             </li>
             <li>
-              Comentar no post oficial marcando{" "}
+              Comentar no post fixado marcando{" "}
               <span className="font-bold text-white">
                 pelo menos 1 amigo (não vale perfil de empresas ou fakes!)
               </span>
