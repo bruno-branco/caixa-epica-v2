@@ -192,7 +192,16 @@ export default function LeadForm() {
                   </a>{" "}
                   no Instagram
                 </li>
-                <li>Comentar no post marcando 1 ou mais amigos</li>
+                <li>
+                  Comentar no{" "}
+                  <a
+                    href="https://www.instagram.com/reel/DL5tE9IxlyB/?utm_source=ig_web_copy_link"
+                    className="text-[#FFB548] hover:underline"
+                  >
+                    post
+                  </a>{" "}
+                  marcando 1 ou mais amigos
+                </li>
               </ul>
             </div>
 
