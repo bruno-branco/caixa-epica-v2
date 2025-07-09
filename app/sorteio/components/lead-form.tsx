@@ -92,7 +92,7 @@ export default function LeadForm() {
                   <Input
                     placeholder="Vecna, o deus mutilado"
                     {...field}
-                    className="border-white/40 border-2 text-white bg-gray-300"
+                    className="border-white/40 border-2 text-black bg-gray-300"
                   />
                 </FormControl>
                 <FormMessage />
@@ -112,7 +112,7 @@ export default function LeadForm() {
                     placeholder="vecnamutilador@email.com"
                     {...field}
                     value={field.value ?? ""}
-                    className="border-white/40 border-2 text-white bg-gray-300"
+                    className="border-white/40 border-2 text-black bg-gray-300"
                   />
                 </FormControl>
                 <FormMessage />
@@ -132,7 +132,7 @@ export default function LeadForm() {
                     placeholder="(xx) xxxx-xxxx"
                     {...field}
                     type="tel"
-                    className="border-white/40 border-2 text-white bg-gray-300"
+                    className="border-white/40 border-2 text-black bg-gray-300"
                     onChange={(e) => field.onChange(phoneMask(e.target.value))}
                   />
                 </FormControl>
@@ -154,7 +154,7 @@ export default function LeadForm() {
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
-                    <SelectTrigger className="w-full text-white bg-gray-300">
+                    <SelectTrigger className="w-full text-black bg-gray-300">
                       <SelectValue placeholder="Selecione" />
                     </SelectTrigger>
                     <SelectContent className="bg-gray-300">
