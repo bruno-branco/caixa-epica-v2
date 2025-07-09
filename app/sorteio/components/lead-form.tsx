@@ -30,7 +30,13 @@ import { toast } from "sonner";
 // Schema is unchanged
 const schema = z.object({
   name: z.string().min(2, { message: "Nome obrigatório" }),
-  email: z.string().email({ message: "Email deve ser válido" }),
+  email: z
+    .string()
+    .optional()
+    .nullable()
+    .refine((val) => !val || /^\S+@\S+\.\S+$/.test(val), {
+      message: "Email deve ser válido",
+    }),
   phone: z
     .string()
     .min(15, { message: "Número dever ser válido no formato brasileiro" })
@@ -105,6 +111,7 @@ export default function LeadForm() {
                   <Input
                     placeholder="vecnareidelas@email.com"
                     {...field}
+                    value={field.value ?? ""}
                     className="border-white/40 border-2 text-white"
                   />
                 </FormControl>
