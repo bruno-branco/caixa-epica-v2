@@ -92,7 +92,7 @@ export default function LeadForm() {
                   <Input
                     placeholder="Vecna, o deus mutilado"
                     {...field}
-                    className="border-white/40 border-2 text-white"
+                    className="border-white/40 border-2 text-white bg-gray-300"
                   />
                 </FormControl>
                 <FormMessage />
@@ -105,14 +105,14 @@ export default function LeadForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="text-white font-bebas text-xl">
-                  Seu melhor e-mail
+                  Seu melhor e-mail (opcional)
                 </FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="vecnareidelas@email.com"
+                    placeholder="vecnamutilador@email.com"
                     {...field}
                     value={field.value ?? ""}
-                    className="border-white/40 border-2 text-white"
+                    className="border-white/40 border-2 text-white bg-gray-300"
                   />
                 </FormControl>
                 <FormMessage />
@@ -132,7 +132,7 @@ export default function LeadForm() {
                     placeholder="(xx) xxxx-xxxx"
                     {...field}
                     type="tel"
-                    className="border-white/40 border-2 text-white"
+                    className="border-white/40 border-2 text-white bg-gray-300"
                     onChange={(e) => field.onChange(phoneMask(e.target.value))}
                   />
                 </FormControl>
@@ -154,10 +154,10 @@ export default function LeadForm() {
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
-                    <SelectTrigger className="w-full text-white">
+                    <SelectTrigger className="w-full text-white bg-gray-300">
                       <SelectValue placeholder="Selecione" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-gray-300">
                       <SelectItem value="search-engines">
                         Ferramentas de pesquisa
                       </SelectItem>
@@ -192,7 +192,7 @@ export default function LeadForm() {
                   </a>{" "}
                   no Instagram
                 </li>
-                <li>Comentar no post marcando 3 amigos</li>
+                <li>Comentar no post marcando 1 ou mais amigos</li>
               </ul>
             </div>
 
@@ -207,7 +207,7 @@ export default function LeadForm() {
                         checked={field.value}
                         onCheckedChange={field.onChange} // Correctly pass the onChange handler
                         id="acceptRules"
-                        className="border-white/50 data-[state=checked]:bg-[#FEB546] data-[state=checked]:text-black"
+                        className="border-white/50 border-2 data-[state=checked]:bg-[#FEB546] data-[state=checked]:text-black"
                       />
                     </FormControl>
                     <FormLabel
