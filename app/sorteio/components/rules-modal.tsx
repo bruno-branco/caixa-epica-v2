@@ -78,7 +78,10 @@ export default function RaffleRulesModal() {
             </li>
             <li>
               Comentar no post oficial marcando{" "}
-              <span className="font-bold text-white">3 amigos diferentes</span>.
+              <span className="font-bold text-white">
+                pelo menos 1 amigo (não vale perfil de empresas ou fakes!)
+              </span>
+              .
             </li>
           </ul>
         </section>
